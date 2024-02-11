@@ -1,0 +1,1 @@
+Website that explains some data structures with code examples, made for a college project aiming to learn about web developing.
