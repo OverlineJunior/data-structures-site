@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-	--dark-color: #0F0A0A;
-	--light-color: #F5EFED;
+	--darker-color: #0F0A0A;
+	--dark-color: #332727;
+	--lighter-color: #F5EFED;
+	--light-color: #D2C9C6;
 	--accent-color: #EB5E55;
 }
 
@@ -17,15 +19,37 @@ body {
 	flex-direction: column;
 }
 
+.link-button {
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	width: 100px;
+	padding: 10px;
+	border-radius: 8px;
+	color: var(--lighter-color);
+	background-color: var(--accent-color);
+}
+
+pre:has(code) {
+	padding: 10px;
+	border-radius: 8px;
+	background-color: var(--light-color);
+}
+
+code {
+	font-size: 14px;
+	color: var(--darker-color);
+}
+
 .header {
 	justify-content: center;
 	padding: 0 10%;
-	background-color: var(--dark-color);
+	background-color: var(--darker-color);
 
 	.title {
 		font-size: 24px;
 		text-align: left;
-		color: var(--light-color)
+		color: var(--lighter-color)
 	}
 
 	.container {
@@ -38,27 +62,16 @@ body {
 .hero {
 	justify-content: center;
 	padding: 60px 10%;
-	background-color: var(--dark-color);
+	background-color: var(--darker-color);
 
 	.title {
 		font-size: 48px;
-		color: var(--light-color);
+		color: var(--lighter-color);
 	}
 
 	.subtext {
 		font-size: 18px;
-		color: var(--light-color);
-	}
-
-	.github {
-		font-size: 14px;
-		text-align: center;
-		text-decoration: none;
-		width: 100px;
-		padding: 10px;
-		border-radius: 8px;
-		color: var(--light-color);
-		background-color: var(--accent-color);
+		color: var(--lighter-color);
 	}
 
 	.container {
@@ -68,4 +81,46 @@ body {
 		margin-right: 50%;
 		padding: 10px;
 	}
+}
+
+.data-structures {
+	.title {
+		font-size: 32px;
+		text-wrap: balance;
+		color: var(--darker-color);
+	}
+
+	.subtext {
+		font-size: 18px;
+		text-wrap: balance;
+		color: var(--darker-color);
+	}
+
+	.left, .right {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		gap: 10px;
+		padding: 10px;
+		margin: 60px 0;
+	}
+
+	.left {
+		margin-left: 10%;
+		margin-right: 60px;
+	}
+
+	.right {
+		margin-left: 60px;
+		margin-right: 10%;
+	}
+
+	.right .link-button {
+		align-self: flex-end;
+	}
+}
+
+.tad {
+	display: flex;
+	background-color: var(--lighter-color);
 }
