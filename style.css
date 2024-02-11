@@ -124,3 +124,12 @@ code {
 	display: flex;
 	background-color: var(--lighter-color);
 }
+
+.lista {
+	display: flex;
+	background-color: var(--light-color);
+
+	pre {
+		background-color: var(--lighter-color);
+	}
+}
