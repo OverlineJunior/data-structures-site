@@ -16,16 +16,17 @@ body {
 	padding: 0 10%;
 	background-color: blue;
 
+	.title {
+		font-size: 24px;
+		text-align: left;
+		background-color: red;
+	}
+
 	.container {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		padding: 10px;
 		background-color: aqua;
-
-		.title {
-			font-size: 24px;
-			background-color: red;
-		}
 	}
 }
 
