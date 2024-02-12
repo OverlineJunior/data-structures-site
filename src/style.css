@@ -145,3 +145,12 @@ code {
 		background-color: var(--light-color);
 	}
 }
+
+.hash {
+	display: flex;
+	background-color: var(--light-color);
+
+	pre {
+		background-color: var(--lighter-color);
+	}
+}
