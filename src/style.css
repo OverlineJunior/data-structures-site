@@ -154,3 +154,12 @@ code {
 		background-color: var(--lighter-color);
 	}
 }
+
+.grafo {
+	display: flex;
+	background-color: var(--lighter-color);
+
+	pre {
+		background-color: var(--light-color);
+	}
+}
