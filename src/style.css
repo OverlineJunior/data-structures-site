@@ -163,3 +163,14 @@ code {
 		background-color: var(--light-color);
 	}
 }
+
+.footer {
+	justify-content: center;
+	padding: 32px 0;
+	background-color: var(--darker-color);
+
+	.creator {
+		text-align: center;
+		color: var(--light-color);
+	}
+}
