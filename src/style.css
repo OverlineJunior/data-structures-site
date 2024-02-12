@@ -136,3 +136,12 @@ code {
 		background-color: var(--lighter-color);
 	}
 }
+
+.fila {
+	display: flex;
+	background-color: var(--lighter-color);
+
+	pre {
+		background-color: var(--light-color);
+	}
+}
