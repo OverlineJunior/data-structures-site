@@ -12,6 +12,8 @@
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	margin: 0;
+	/* Common fix for flex and text scaling issues. See https://www.youtube.com/watch?v=cH8VbLM1958. */
+	min-width: 0;
 }
 
 body {
@@ -105,8 +107,6 @@ code {
 		gap: 10px;
 		padding: 10px;
 		margin: 60px 0;
-		/* Prevents text from growing these containers. Why? God said so. */
-		width: 0px;
 	}
 
 	.left {
