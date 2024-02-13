@@ -105,7 +105,8 @@ code {
 		gap: 10px;
 		padding: 10px;
 		margin: 60px 0;
-		max-width: 40%;
+		/* Prevents text from growing these containers. Why? God said so. */
+		width: 0px;
 	}
 
 	.left {
