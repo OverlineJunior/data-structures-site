@@ -77,24 +77,71 @@ int main(void) {
 
         <div class="lista">
             <div class="left">
-                <h2 class="title">Lista</h2>
-                <p class="subtext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error voluptatibus totam, at aliquid, laboriosam vitae nulla velit assumenda facere laudantium quasi ipsum cum non nemo amet quas beatae repudiandae earum!</p>
+                <h2 class="title">Lista Encadeada</h2>
+                <p class="subtext">É uma estrutura de dado com a finalidade de armazenar um numero variavel de dados.<br><br>A implementacao e feita com cada dado sendo armazenado em um nodo que aponta para o proximo, assim permitindo o acesso de todos os dados da lista com o uso de iteracao.<br><br>Ha tambem listas encadeadas duplas. Os nodos desta, alem de apontarem para o proximo, tambem apontam para o anterior, permitindo iteracao de duas ordens diferentes.</p>
             </div>
 
             <div class="right">
-<pre><code>pre:has(code) {
-    padding: 10px;
-    background-color: var(--light-color);
-    filter: brightness(80%);
+<pre><code>#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+typedef struct Node {
+    int value;
+    struct Node* next;
+    struct Node* prev;
+} Node;
+
+Node* new_node(int value) {
+    Node* node = (Node*) malloc(sizeof(Node));
+    node->value = value;
+    node->next = NULL;
+    node->prev = NULL;
+
+    return node;
 }
 
-.tad {
-    display: flex;
-    background-color: var(--light-color);
+Node* new_head(void) {
+    return new_node(0);
+}
+
+void push_node(Node* head, int value) {
+    Node* node = new_node(value);
+
+    if (head->next == NULL) {
+        node->prev = head;
+        head->next = node;
+    } else {
+        push_node(head->next, value);
+    }
+}
+
+void pop_node(Node* head) {
+    if (head->next == NULL) {
+        if (head->prev == NULL)
+            return;
+
+        head->prev->next = NULL;
+        free(head);
+    } else {
+        pop_node(head->next);
+    }
+}
+
+void destroy_head(Node* head) {
+    Node *current = head->next;
+
+    while (current != NULL) {
+        Node* next = current->next;
+        free(current);
+        current = next;
+    }
+
+    free(head);
 }
 </code></pre>
 
-                <a class="link-button" target="_blank">Download</a>
+                <a class="link-button" target="_blank" href="../example-codes/linked_list.c">Download</a>
             </div>
         </div>
 
